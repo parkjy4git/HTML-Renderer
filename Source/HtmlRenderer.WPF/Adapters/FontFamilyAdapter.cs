@@ -51,7 +51,8 @@ namespace TheArtOfDev.HtmlRenderer.WPF.Adapters
         {
             get
             {
-                string name =  _fontFamily.FamilyNames[_xmlLanguage];
+                _fontFamily.FamilyNames.TryGetValue(_xmlLanguage, out string name);
+
                 if (string.IsNullOrEmpty(name))
                 {
                     foreach (var familyName in _fontFamily.FamilyNames)
