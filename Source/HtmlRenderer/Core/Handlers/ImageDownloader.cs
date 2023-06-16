@@ -50,7 +50,7 @@ namespace TheArtOfDev.HtmlRenderer.Core.Handlers
 
         public ImageDownloader()
         {
-            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+            SecurityProtocolUtils.SetTls12();
         }
 
         /// <summary>
